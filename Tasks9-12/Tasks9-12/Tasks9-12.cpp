@@ -126,27 +126,10 @@ void task12() {
 			break;
 	}
 
-	printf("----------------THIRD-SOLUTION---------------\n");
-	#pragma omp sections
-	{
-	#pragma omp section
-		// code 1
-	#pragma omp section
-		// code 2
-	}
-
-
-
-
-
-
-	#pragma omp parallel
-	printf("Hello world from %d thread of %d\n", omp_get_thread_num(), omp_get_num_threads() - 1);
-
 
 	omp_set_dynamic(0);
-	printf("----------------FIFTH-SOLUTION---------------\n");
-	//пятый способ
+	printf("----------------THIRD-SOLUTION---------------\n");
+
 	#pragma omp parallel
 	{
 		std::this_thread::sleep_for(std::chrono::seconds(thread_num - omp_get_thread_num()));
@@ -160,12 +143,12 @@ void task12() {
 
 int main()
 {
-	//printf("----------------TASK-9----------------\n");
-	//task9();
-	//printf("----------------TASK-10----------------\n");
-	//task10();
-	//printf("----------------TASK-11----------------\n");
-	//task11(); 
+	printf("----------------TASK-9----------------\n");
+	task9();
+	printf("----------------TASK-10----------------\n");
+	task10();
+	printf("----------------TASK-11----------------\n");
+	task11(); 
 	printf("----------------TASK-12----------------\n");
 	task12();
 
